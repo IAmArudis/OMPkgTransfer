@@ -1,0 +1,17 @@
+# Ignore Excel binaries
+*.xlam
+*.xlsm
+*.xlsx
+
+# Ignore temp files
+~$*
+*.tmp
+
+# Ignore Excel temp files
+*.xlb
+Thumbs.db
+.DS_Store
+
+# Ignore backups folder
+/Testing Folders/
+/.logs/
