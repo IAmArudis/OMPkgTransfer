@@ -61,13 +61,13 @@ Private Const CLASS_NAME            As String = "ProjectInfo"
 Private Const PROJECT_NAME          As String = "OMPkgTransfer"
 
 'The current version string.  e.g. "v2.5.24" or "v10.20.1"
-Private Const VERSION_              As String = "v0.1.0"    'New TransferData_ classes get a minor bump.
+Private Const VERSION_              As String = "v0.1.2"    'New TransferData_ classes get a minor bump.
 
 'The expected base filename  e.g. "CodeSnippets.xlam" or "Employee Schedule Master v1.4.7.xlsm"
 Private Const MASTER_FILE_NAME      As String = "OMPkgTransfer.xlsm"
 
 'The date of the last revision.  e.g. "2026-03-30"
-Private Const REVISION_DATE         As String = "2026-05-12"
+Private Const REVISION_DATE         As String = "2026-07-20"
 
 'The extension of the live project.  e.g. ".xlsm" or ".xlam"
 Private Const PROJECT_LIVE_TARGET_EXTENSION As String = ".xlam"

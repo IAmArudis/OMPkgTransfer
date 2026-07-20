@@ -172,6 +172,7 @@ Private Sub PrintTransfer_v4_86(oData As TransferData_v4_86)
    Debug.Print "Agent:              " & oData.OfficeUse.Agent
    Debug.Print "Minister:           " & oData.OfficeUse.Minister
    Debug.Print "Tour Info:          " & oData.OfficeUse.TourInfo
+   Debug.Print "Budget:             " & oData.OfficeUse.Budget
    Debug.Print "Special Consid.:    " & oData.OfficeUse.SpecialConsiderations
 
    Debug.Print "--- Client 1 ---"

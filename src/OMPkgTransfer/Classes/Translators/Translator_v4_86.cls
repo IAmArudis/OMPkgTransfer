@@ -189,8 +189,11 @@ Public Function GetFoodData(ByVal oKVCol As OMLogger.KVCollection) As TFoodData_
    On Error Resume Next
    With GetFoodData
       .FoodOption = DS_EnumMappers.GetFoodEnum(oKVCol.GetFirst("food-option").Value)
+      .FoodQty = oKVCol.GetFirst("food-qty").Value
       .FoodPrice = oKVCol.GetFirst("food-price").Value
+      .CakeQty = oKVCol.GetFirst("cake-qty").Value
       .CakePrice = oKVCol.GetFirst("cake-price").Value
+      .PunchQty = oKVCol.GetFirst("punch-qty").Value
       .PunchPrice = oKVCol.GetFirst("punch-price").Value
    End With
    On Error GoTo 0
@@ -233,6 +236,7 @@ Public Function GetOfficeUseData(ByVal oKVCol As OMLogger.KVCollection) As TOffi
    With GetOfficeUseData
       .Agent = oKVCol.GetFirst("agent").Value
       .Minister = oKVCol.GetFirst("minister").Value
+      .Budget = oKVCol.GetFirst("budget").Value
       .TourInfo = oKVCol.GetFirst("tour-info").Value
       .SpecialConsiderations = oKVCol.GetFirst("special-considerations").Value
    End With

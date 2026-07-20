@@ -57,6 +57,7 @@ Public Type TOfficeUseData_v4_86
    Agent                   As String
    Minister                As String
    TourInfo                As String
+   Budget                  As Currency
    SpecialConsiderations   As String
 End Type
 
@@ -88,8 +89,11 @@ End Type
 
 Public Type TFoodData_v4_86
    FoodOption              As Long        'Long - see NOTES above.  Maps to FoodEnum via DS.GetFoodEnum
+   FoodQty                 As Long
    FoodPrice               As Currency
+   CakeQty                 As Long
    CakePrice               As Currency
+   PunchQty                As Long
    PunchPrice              As Currency
 End Type
 
@@ -103,22 +107,23 @@ End Type
 
 '  TOptionalsData_v4_86 - declared after TMiscItemData_v4_86 which it contains.
 Public Type TOptionalsData_v4_86
-   BarRental               As String
-   BeverageTower           As String
-   SilverService           As String
-   CandyStation            As String
-   ChocolateFountain       As String
-   GroomsCake              As String
-   PlatinumPackage         As String
-   ReceptionCenterpieces   As String
-   DanceFloorMonogram      As String
-   VideoMonitorRental      As String
-   Minister                As String
-   WeddingPartyFlowers     As String
+'  All of these are Qty indicators except ColdSparklers, CloudMachine, and Misc items.
+   BarRental               As Long
+   BeverageTower           As Long
+   SilverService           As Long
+   CandyStation            As Long
+   ChocolateFountain       As Long
+   GroomsCake              As Long
+   PlatinumPackage         As Long
+   ReceptionCenterpieces   As Long
+   DanceFloorMonogram      As Long
+   VideoMonitorRental      As Long
+   Minister                As Long
+   WeddingPartyFlowers     As Long
    Rehearsal               As Long        'Long - see NOTES above.  Maps to RehearsalTypeEnum via DS.GetRehearsalTypeEnum
-   VideoCeremony           As String
-   ColdSparklers           As String
-   CloudMachine            As String
+   VideoCeremony           As Long
+   ColdSparklers           As String      'These are string because the Qty will always map to one except in one case where it maps to 0.
+   CloudMachine            As String      'These are string because the Qty will always map to one except in one case where it maps to 0.
    MiscTax1                As TMiscItemData_v4_86
    MiscTax2                As TMiscItemData_v4_86
    MiscTax3                As TMiscItemData_v4_86
