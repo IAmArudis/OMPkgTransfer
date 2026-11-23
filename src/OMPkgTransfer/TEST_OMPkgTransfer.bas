@@ -169,10 +169,13 @@ Private Sub PrintTransfer_v4_86(oData As TransferData_v4_86)
    Debug.Print "Container Version:  " & oData.Version.ToString()
 
    Debug.Print "--- Office Use ---"
-   Debug.Print "Agent:              " & oData.OfficeUse.Agent
-   Debug.Print "Minister:           " & oData.OfficeUse.Minister
-   Debug.Print "Tour Info:          " & oData.OfficeUse.TourInfo
+   Debug.Print "Toured:             " & oData.OfficeUse.Toured
+   Debug.Print "Touring Agent:      " & oData.OfficeUse.TouringAgent
+   Debug.Print "Tour Date:          " & oData.OfficeUse.TourDate
+   Debug.Print "Booking Agent:      " & oData.OfficeUse.BookingAgent
    Debug.Print "Budget:             " & oData.OfficeUse.Budget
+   Debug.Print "Monthly Payment:    " & oData.OfficeUse.MonthlyPayment
+   Debug.Print "Minister:           " & oData.OfficeUse.Minister
    Debug.Print "Special Consid.:    " & oData.OfficeUse.SpecialConsiderations
 
    Debug.Print "--- Client 1 ---"

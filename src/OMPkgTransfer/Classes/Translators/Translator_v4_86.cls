@@ -163,6 +163,7 @@ Public Function GetEventData(ByVal oKVCol As OMLogger.KVCollection) As TEventDat
    If oKVCol Is Nothing Then Exit Function
    On Error Resume Next
    With GetEventData
+      .BookingDate = oKVCol.GetFirst("booking-date").Value
       .EventDate = oKVCol.GetFirst("event-date").Value
       .CheckInTime = oKVCol.GetFirst("check-in-time").Value
       .CheckOutTime = oKVCol.GetFirst("check-out-time").Value
@@ -234,10 +235,13 @@ Public Function GetOfficeUseData(ByVal oKVCol As OMLogger.KVCollection) As TOffi
    If oKVCol Is Nothing Then Exit Function
    On Error Resume Next
    With GetOfficeUseData
-      .Agent = oKVCol.GetFirst("agent").Value
-      .Minister = oKVCol.GetFirst("minister").Value
+      .Toured = oKVCol.GetFirst("toured").Value
+      .TouringAgent = oKVCol.GetFirst("touring-agent").Value
+      .TourDate = oKVCol.GetFirst("tour-date").Value
+      .BookingAgent = oKVCol.GetFirst("booking-agent").Value
       .Budget = oKVCol.GetFirst("budget").Value
-      .TourInfo = oKVCol.GetFirst("tour-info").Value
+      .MonthlyPayment = oKVCol.GetFirst("monthly-payment").Value
+      .Minister = oKVCol.GetFirst("minister").Value
       .SpecialConsiderations = oKVCol.GetFirst("special-considerations").Value
    End With
    On Error GoTo 0

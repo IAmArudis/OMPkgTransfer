@@ -54,10 +54,13 @@ Option Base 1
 '##############################################################################################################################################################################
 
 Public Type TOfficeUseData_v4_86
-   Agent                   As String
-   Minister                As String
-   TourInfo                As String
+   Toured                  As String
+   TouringAgent            As String
+   TourDate                As String
+   BookingAgent            As String
    Budget                  As Currency
+   MonthlyPayment          As Currency
+   Minister                As String
    SpecialConsiderations   As String
 End Type
 
@@ -77,6 +80,7 @@ End Type
 
 
 Public Type TEventData_v4_86
+   BookingDate             As String
    EventDate               As String
    CheckInTime             As String
    CheckOutTime            As String
