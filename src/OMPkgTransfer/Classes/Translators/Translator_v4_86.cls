@@ -163,6 +163,7 @@ Public Function GetEventData(ByVal oKVCol As OMLogger.KVCollection) As TEventDat
    If oKVCol Is Nothing Then Exit Function
    On Error Resume Next
    With GetEventData
+      .BookingDate = oKVCol.GetFirst("booking-date").Value
       .EventDate = oKVCol.GetFirst("event-date").Value
       .CheckInTime = oKVCol.GetFirst("check-in-time").Value
       .CheckOutTime = oKVCol.GetFirst("check-out-time").Value
@@ -189,8 +190,11 @@ Public Function GetFoodData(ByVal oKVCol As OMLogger.KVCollection) As TFoodData_
    On Error Resume Next
    With GetFoodData
       .FoodOption = DS_EnumMappers.GetFoodEnum(oKVCol.GetFirst("food-option").Value)
+      .FoodQty = oKVCol.GetFirst("food-qty").Value
       .FoodPrice = oKVCol.GetFirst("food-price").Value
+      .CakeQty = oKVCol.GetFirst("cake-qty").Value
       .CakePrice = oKVCol.GetFirst("cake-price").Value
+      .PunchQty = oKVCol.GetFirst("punch-qty").Value
       .PunchPrice = oKVCol.GetFirst("punch-price").Value
    End With
    On Error GoTo 0
@@ -231,9 +235,13 @@ Public Function GetOfficeUseData(ByVal oKVCol As OMLogger.KVCollection) As TOffi
    If oKVCol Is Nothing Then Exit Function
    On Error Resume Next
    With GetOfficeUseData
-      .Agent = oKVCol.GetFirst("agent").Value
+      .Toured = oKVCol.GetFirst("toured").Value
+      .TouringAgent = oKVCol.GetFirst("touring-agent").Value
+      .TourDate = oKVCol.GetFirst("tour-date").Value
+      .BookingAgent = oKVCol.GetFirst("booking-agent").Value
+      .Budget = oKVCol.GetFirst("budget").Value
+      .MonthlyPayment = oKVCol.GetFirst("monthly-payment").Value
       .Minister = oKVCol.GetFirst("minister").Value
-      .TourInfo = oKVCol.GetFirst("tour-info").Value
       .SpecialConsiderations = oKVCol.GetFirst("special-considerations").Value
    End With
    On Error GoTo 0
